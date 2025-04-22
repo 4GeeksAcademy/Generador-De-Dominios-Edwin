@@ -21,10 +21,13 @@ window.onload = function() {
     let phrase = [pronoun, adj, noun, domain];
     let domains ="";
 
-  for (let index = 0; index <= 3; index++) {
-    let numRandom = Math.floor(Math.random()*7);
-    console.log(index, numRandom)
-    domains += phrase [index] [numRandom]
+  for (let index = 0; index < 8; index++) {
+    for (let index = 0; index <= 3; index++) {
+      let numRandom = Math.floor(Math.random()*7);
+      console.log(index, numRandom)
+      domains += phrase [index] [numRandom]
+    }  
+    domains += "\n"
   }  
   console.log(domains);
   document.getElementById("domains").innerHTML = domains;
